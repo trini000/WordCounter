@@ -47,7 +47,6 @@ int WordCounter::AnalyzeTexts(wstring filePath)
 
 bool WordCounter::CheckFileExt(WCHAR *filename)
 {
-	wchar_t * ptr;
 	wchar_t *txt = L".txt";
 	wchar_t *pdf = L".pdf";
 	wchar_t *doc = L".doc";
