@@ -23,9 +23,11 @@ int WordCounter::AnalyzeTexts(wstring filePath)
 	char word[100];
 	memset(word, 0, 100);
 	int i = 0;
+	long lCharsProcessed = 0;
 	while (!textFile.eof())
 	{
 		word[i++] = textFile.get();
+		lCharsProcessed++;
 		if ((word[i-1] <'A' || word[i-1] > 'Z') && (word[i-1] < 'a' ||word[i-1] > 'z'))
 		{
 			if (i > 2)	// skip empty stuff and letters
@@ -42,6 +44,7 @@ int WordCounter::AnalyzeTexts(wstring filePath)
 		}
 	}
 
+	cout << "                " << lCharsProcessed << " characters processed." << endl;
 	return 0;
 }
 
